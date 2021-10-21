@@ -1,1 +1,1 @@
-# Contextual_Language_Models_for_KGC
+# Contextual Language Models for Knowledge Graph Completion
