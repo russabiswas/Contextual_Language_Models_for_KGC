@@ -1,12 +1,24 @@
-python3 generate_train_descriptions.py --bert_model bert-base-cased --data_dir ./data/FB13 --task_name kg > ../data_for_GPT2/FB13/train/description.txt
-python3 generate_train_descriptions.py --bert_model bert-base-cased --data_dir ./data/WN11 --task_name kg > ../data_for_GPT2/WN11/train/description.txt
-python3 generate_test_descriptions.py --bert_model bert-base-cased --data_dir ./data/FB13 --task_name kg > ../data_for_GPT2/FB13/test/description.txt
-python3 generate_test_descriptions.py --bert_model bert-base-cased --data_dir ./data/WN11 --task_name kg > ../data_for_GPT2/WN11/test/description.txt
-python3 generate_dev_descriptions.py --bert_model bert-base-cased --data_dir ./data/FB13 --task_name kg > ../data_for_GPT2/FB13/dev/description.txt
-python3 generate_dev_descriptions.py --bert_model bert-base-cased --data_dir ./data/WN11 --task_name kg > ../data_for_GPT2/WN11/dev/description.txt
-python3 generate_train_labels.py --bert_model bert-base-cased --data_dir ./data/FB13 --task_name kg > ../data_for_GPT2/FB13/train/text.txt
-python3 generate_train_labels.py --bert_model bert-base-cased --data_dir ./data/WN11 --task_name kg > ../data_for_GPT2/WN11/train/text.txt
-python3 generate_test_labels.py --bert_model bert-base-cased --data_dir ./data/FB13 --task_name kg > ../data_for_GPT2/FB13/test/text.txt
-python3 generate_test_labels.py --bert_model bert-base-cased --data_dir ./data/WN11 --task_name kg > ../data_for_GPT2/WN11/test/text.txt
-python3 generate_dev_labels.py --bert_model bert-base-cased --data_dir ./data/FB13 --task_name kg > ../data_for_GPT2/FB13/dev/text.txt
-python3 generate_dev_labels.py --bert_model bert-base-cased --data_dir ./data/WN11 --task_name kg > ../data_for_GPT2/WN11/dev/text.txt
+python generate_test_labels.py --data_dir ./data/FB13 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/FB13/test/text.txt
+python generate_test_labels.py --data_dir ./data/WN11 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/WN11/test/text.txt
+python generate_dev_labels.py --data_dir ./data/FB13 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/FB13/dev/text.txt
+python generate_dev_labels.py --data_dir ./data/WN11 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/WN11/dev/text.txt
+python generate_train_labels.py --data_dir ./data/FB13 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/FB13/train/text.txt
+python generate_train_labels.py --data_dir ./data/WN11 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/WN11/train/text.txt
+python generate_test_descriptions.py --data_dir ./data/FB13 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/FB13/test/description.txt
+python generate_test_descriptions.py --data_dir ./data/WN11 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/WN11/test/description.txt
+python generate_dev_descriptions.py --data_dir ./data/FB13 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/FB13/dev/description.txt
+python generate_dev_descriptions.py --data_dir ./data/WN11 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/WN11/dev/description.txt
+python generate_train_descriptions.py --data_dir ./data/FB13 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/FB13/train/description.txt
+python generate_train_descriptions.py --data_dir ./data/WN11 --task_name kg | cut -f 1,2,3 > ../data_for_GPT2/WN11/train/description.txt
+python generate_test_labels.py --data_dir ./data/FB13 --task_name kg | cut -f 4 > ../data_for_GPT2/FB13/test/labels.txt
+python generate_test_labels.py --data_dir ./data/WN11 --task_name kg | cut -f 4 > ../data_for_GPT2/WN11/test/labels.txt
+python generate_dev_labels.py --data_dir ./data/FB13 --task_name kg | cut -f 4 > ../data_for_GPT2/FB13/dev/labels.txt
+python generate_dev_labels.py --data_dir ./data/WN11 --task_name kg | cut -f 4 > ../data_for_GPT2/WN11/dev/labels.txt
+python generate_train_labels.py --data_dir ./data/FB13 --task_name kg | cut -f 4 > ../data_for_GPT2/FB13/train/labels.txt
+python generate_train_labels.py --data_dir ./data/WN11 --task_name kg | cut -f 4 > ../data_for_GPT2/WN11/train/labels.txt
+python generate_test_descriptions.py --data_dir ./data/FB13 --task_name kg | cut -f 4 > ../data_for_GPT2/FB13/test/labels.txt
+python generate_test_descriptions.py --data_dir ./data/WN11 --task_name kg | cut -f 4 > ../data_for_GPT2/WN11/test/labels.txt
+python generate_dev_descriptions.py --data_dir ./data/FB13 --task_name kg | cut -f 4 > ../data_for_GPT2/FB13/dev/labels.txt
+python generate_dev_descriptions.py --data_dir ./data/WN11 --task_name kg | cut -f 4 > ../data_for_GPT2/WN11/dev/labels.txt
+python generate_train_descriptions.py --data_dir ./data/FB13 --task_name kg | cut -f 4 > ../data_for_GPT2/FB13/train/labels.txt
+python generate_train_descriptions.py --data_dir ./data/WN11 --task_name kg | cut -f 4 > ../data_for_GPT2/WN11/train/labels.txt
